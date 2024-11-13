@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live with Purpose Series</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        /* Header Styling */
+        .header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 50px;
+            background-image: url('https://via.placeholder.com/1500x400.png?text=Live+with+Purpose+Series');
+            background-size: cover;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        .header p {
+            font-size: 1.2em;
+        }
+        /* Main Content Styling */
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1em;
+            line-height: 1.6;
+        }
+        /* Subscription Section */
+        .subscription {
+            background-color: #f0f8ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .subscription h3 {
+            margin: 0;
+            color: #333;
+        }
+        .subscription p {
+            font-size: 1em;
+        }
+        /* Payment Details Section */
+        .payment-details {
+            background-color: #e6fffa;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            color: #006644;
+            margin-top: 20px;
+        }
+        .payment-details p {
+            font-size: 1em;
+        }
+        /* Button Styling */
+        .button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .button:hover {
+            background-color: #555;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <div class="header">
+        <h1>Live with Purpose Series</h1>
+        <p>Embark on a Journey to Discover Your Purpose and Strengthen Your Faith</p>
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="container">
+        <!-- Welcome Section -->
+        <h2>Welcome to the Series</h2>
+        <p>Our one-month "Live with Purpose" series is designed to inspire, challenge, and support you on your spiritual journey. Each week, you’ll explore new insights and practices, helping you grow in faith and purpose.</p>
+
+        <!-- Subscription Plan Section -->
+        <div class="subscription">
+            <h3>Monthly Subscription</h3>
+            <p>Gain access to the full program and live sessions for just <strong>$150 (USD)</strong> or equivalent in Bitcoin.</p>
+            <p>This includes all sessions, exclusive resources, and group discussions.</p>
+        </div>
+
+        <!-- Payment Details Section -->
+        <div class="payment-details">
+            <h3>Payment via Bitcoin</h3>
+            <p>To confirm your subscription, please complete a Bitcoin payment to the following wallet address:</p>
+            <p><strong>Bitcoin Wallet Address:</strong> <span id="walletAddress">1A2b3Cd4Ef5G6H7iJK8l9MnOpQRstUvWxYz</span></p>
+            <button class="button" onclick="copyWalletAddress()">Copy Wallet Address</button>
+            <p>If you need to purchase Bitcoin, click the link below to proceed:</p>
+            <a href="https://bitpay.com/buy-bitcoin/" target="_blank" class="button">Buy Bitcoin</a>
+            <p><strong>Once you've purchased Bitcoin, please send it to the wallet address above to confirm your subscription.</strong></p>
+            <p>If you encounter any issues during the process, please contact us immediately.</p>
+            
+            <!-- Add Telegram Support Contact Link -->
+            <p>If you need assistance, feel free to reach out to us via our Telegram support:</p>
+            <a href="https://t.me/yourtelegramusername" target="_blank" class="button">Contact Support on Telegram</a>
+        </div>
+
+        <!-- Status Section -->
+        <div id="status" style="text-align: center; margin-top: 30px;">
+            <h3>Payment Status</h3>
+            <p>Please wait until your payment is confirmed. Once we receive your Bitcoin, your subscription will be activated.</p>
+            <button class="button" onclick="checkPaymentStatus()">Check Payment Status</button>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <p>Thank you for joining the "Live with Purpose" series. We’re excited to have you on this journey!</p>
+    </div>
+
+    <script>
+        // Function to copy the Bitcoin wallet address to the clipboard
+        function copyWalletAddress() {
+            var walletAddress = document.getElementById("walletAddress").innerText;
+            navigator.clipboard.writeText(walletAddress)
+                .then(() => {
+                    alert("Bitcoin wallet address copied to clipboard!");
+                })
+                .catch(err => {
+                    console.error("Failed to copy address: ", err);
+                });
+        }
+
+        // Function to simulate checking the payment status
+        function checkPaymentStatus() {
+            alert("Your payment status is being verified. Please allow some time for confirmation.");
+        }
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
